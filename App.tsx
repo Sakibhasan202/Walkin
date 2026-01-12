@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { LayoutDashboard, Package, Settings, LogOut, Menu, X, ShoppingCart, Truck, History as HistoryIcon } from 'lucide-react';
-import Dashboard from './components/Dashboard';
-import Inventory from './components/Inventory';
-import POS from './components/POS';
-import Purchase from './components/Purchase';
-import History from './components/History';
-import { InventoryItem, ViewState, KPIStats, CartItem, PaymentMethod, Transaction } from './types';
+import Dashboard from './components/Dashboard.tsx';
+import Inventory from './components/Inventory.tsx';
+import POS from './components/POS.tsx';
+import Purchase from './components/Purchase.tsx';
+import History from './components/History.tsx';
+import { InventoryItem, ViewState, KPIStats, CartItem, PaymentMethod, Transaction } from './types.ts';
 
 // Initial Mock Data
 const INITIAL_ITEMS: InventoryItem[] = [

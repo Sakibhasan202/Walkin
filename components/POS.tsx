@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { InventoryItem, CartItem, PaymentMethod } from '../types';
+import { InventoryItem, CartItem, PaymentMethod } from '../types.ts';
 import { Search, ShoppingCart, Plus, Minus, Trash2, CreditCard, Banknote, QrCode, CheckCircle2, X } from 'lucide-react';
 
 interface POSProps {

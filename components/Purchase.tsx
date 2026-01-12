@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { InventoryItem } from '../types';
+import { InventoryItem } from '../types.ts';
 import { Search, PackagePlus, ArrowDownToLine, History } from 'lucide-react';
 
 interface PurchaseProps {

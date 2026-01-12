@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Transaction } from '../types';
+import { Transaction } from '../types.ts';
 import { Search, Calendar, Filter, ArrowUpRight, ArrowDownLeft, FileText } from 'lucide-react';
 
 interface HistoryProps {

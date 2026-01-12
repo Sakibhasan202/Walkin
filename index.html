@@ -6,6 +6,8 @@
     <title>Walkin POS & Inventory</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Babel Standalone for in-browser JSX compilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
       body {
         font-family: 'Inter', sans-serif;
@@ -26,20 +28,32 @@
         background: #94a3b8;
       }
     </style>
-  <script type="importmap">
+    <script type="importmap">
 {
   "imports": {
     "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-dom/client": "https://esm.sh/react-dom@^19.2.3/client",
     "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
     "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "recharts": "https://esm.sh/recharts@^3.6.0"
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
   }
 }
 </script>
-</head>
+    <!-- Polyfill for process.env.API_KEY -->
+    <script>
+      window.process = {
+        env: {
+          // __API_KEY__ will be replaced by the Netlify build command
+          API_KEY: "__API_KEY__"
+        }
+      };
+    </script>
+  </head>
   <body class="bg-slate-50 text-slate-900">
     <div id="root"></div>
+    <!-- Entry Point -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
   </body>
 </html>

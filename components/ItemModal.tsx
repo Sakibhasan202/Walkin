@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, Wand2, Loader2, Image as ImageIcon } from 'lucide-react';
-import { InventoryItem, NewItemData } from '../types';
-import { generateProductImage } from '../services/geminiService';
+import { InventoryItem, NewItemData } from '../types.ts';
+import { generateProductImage } from '../services/geminiService.ts';
 
 interface ItemModalProps {
   isOpen: boolean;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { InventoryItem } from '../types';
+import { InventoryItem } from '../types.ts';
 import { Edit2, Trash2, Plus, Search, Package } from 'lucide-react';
-import ItemModal from './ItemModal';
+import ItemModal from './ItemModal.tsx';
 
 interface InventoryProps {
   items: InventoryItem[];
